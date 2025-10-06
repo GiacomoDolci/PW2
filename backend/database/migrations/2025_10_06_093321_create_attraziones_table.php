@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nome');
             $table->string('immagine')->nullable();
+            $table->string('video')->nullable();
             $table->string('tipologia');
             $table->text('descrizione')->nullable();
             // Relazione con la tabella destinazioni
