@@ -1,22 +1,21 @@
-<div *ngIf="destinazione">
-  <h2>{{ destinazione.nome }}</h2>
-  <img [src]="'http://127.0.0.1:8000/' + destinazione.immagine" alt="{{ destinazione.nome }}">
-  <p>{{ destinazione.descrizione }}</p>
+<div *ngIf="destinazione" class="mb-4 text-center">
+  <h2 class="fw-bold">{{ destinazione.nome }}</h2>
+  <p class="text-muted">{{ destinazione.descrizione }}</p>
+</div>
 
-  <h3>Attrazioni</h3>
-  <div class="grid">
-    <div *ngFor="let attr of attrazioni" class="card">
-      <ng-container *ngIf="attr.video; else imageBlock">
-        <video width="300" controls>
-          <source [src]="'http://127.0.0.1:8000/' + attr.video" type="video/mp4">
-        </video>
-      </ng-container>
-      <ng-template #imageBlock>
-        <img [src]="'http://127.0.0.1:8000/' + attr.immagine" alt="{{ attr.nome }}">
-      </ng-template>
-
-      <h4>{{ attr.nome }}</h4>
-      <p>{{ attr.tipologia }}</p>
+<div class="grid">
+  <div *ngFor="let attr of attrazioni" class="card" (click)="apriAttrazione(attr.id)">
+    <ng-container *ngIf="attr.video; else imageBlock">
+      <video class="rounded-top" controls>
+        <source [src]="'http://127.0.0.1:8000/' + attr.video" type="video/mp4">
+      </video>
+    </ng-container>
+    <ng-template #imageBlock>
+      <img [src]="'http://127.0.0.1:8000/' + attr.immagine" alt="{{ attr.nome }}">
+    </ng-template>
+    <div class="card-body">
+      <h5 class="fw-bold">{{ attr.nome }}</h5>
+      <span class="badge bg-info text-dark mb-2">{{ attr.tipologia }}</span>
       <p>{{ attr.descrizione }}</p>
     </div>
   </div>
