@@ -11,7 +11,7 @@ class Attrazione extends Model
 
     protected $table = 'attrazioni';
 
-    protected $fillable = ['nome', 'immagine', 'tipologia', 'descrizione', 'destinazione_id'];
+    protected $fillable = ['nome', 'immagine', 'video', 'tipologia', 'descrizione', 'destinazione_id'];
 
     public function destinazione()
     {
