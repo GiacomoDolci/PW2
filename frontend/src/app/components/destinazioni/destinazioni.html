@@ -1,1 +1,11 @@
-<p>destinazioni works!</p>
+<div class="container">
+  <h2>Destinazioni turistiche</h2>
+  <div class="grid">
+    <div *ngFor="let dest of destinazioni" class="card" (click)="apriDettaglio(dest.id)">
+      <img [src]="'http://127.0.0.1:8000/' + dest.immagine" alt="{{ dest.nome }}">
+      <h3>{{ dest.nome }}</h3>
+      <p>{{ dest.paese }}</p>
+      <p>{{ dest.descrizione }}</p>
+    </div>
+  </div>
+</div>
