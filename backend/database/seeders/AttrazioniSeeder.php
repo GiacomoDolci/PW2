@@ -33,7 +33,7 @@ class AttrazioniSeeder extends Seeder
             ],
             [
                 'nome' => 'Monte Baldo',
-                'immagine' => 'https://www.veneto.info/wp-content/uploads/sites/114/monte-baldo-hd.jpg',
+                'immagine' => 'images/attrazioni/monte-baldo.jpg',
                 'video' => '',
                 'tipologia' => 'Avventura',
                 'descrizione' => 'Il Monte Baldo domina il Lago di Garda con la sua lunga dorsale verde e rocciosa, offrendo panorami che abbracciano il lago, le Dolomiti e la pianura veneta. Conosciuto come il “Giardino d’Europa” per la straordinaria varietà di flora alpina e mediterranea, è una meta perfetta per escursioni, trekking e passeggiate panoramiche. Dalle sue creste, raggiungibili anche con la funivia da Malcesine, si gode una vista spettacolare che cambia a ogni passo.',
@@ -60,7 +60,7 @@ class AttrazioniSeeder extends Seeder
             ],
             [
                 'nome' => 'Molveno',
-                'immagine' => 'https://melinda.it/wp-content/uploads/2019/11/mercato-melindatrentina-1.jpg',
+                'immagine' => 'images/attrazioni/molveno.jpg',
                 'video' => '',
                 'tipologia' => 'Avventura',
                 'descrizione' => 'L’itinerario tra i terreni della Melinda, nelle valli intorno a Trento, è un viaggio avventuroso nel cuore della tradizione trentina. Tra filari ordinati di meli e profumi di montagna, il percorso conduce alla scoperta dei segreti della coltivazione e della raccolta delle celebri mele Melinda. Lungo il cammino si possono visitare frutteti, antichi masi e piccoli borghi agricoli, vivendo un’esperienza immersiva che unisce natura, gusto e cultura contadina.',
@@ -79,7 +79,7 @@ class AttrazioniSeeder extends Seeder
             ],
             [
                 'nome' => 'Tarvisio',
-                'immagine' => 'https://www.montagnaestate.it/wp-content/uploads/monte-lussari-tarvisio-in-estate-e1711819260947-1200x573.jpg',
+                'immagine' => 'images/attrazioni/tarvisio.jpg',
                 'video' => '',
                 'tipologia' => 'Storica',
                 'descrizione' => 'Tarvisio, incastonata tra le Alpi Giulie al confine con Austria e Slovenia, è una meta che unisce natura selvaggia e cultura mitteleuropea. Circondata da foreste, laghi e vette imponenti, offre sentieri escursionistici spettacolari e panorami mozzafiato in ogni stagione. Tra malghe, pascoli e tradizioni alpine, Tarvisio regala un’esperienza autentica, ideale per chi cerca avventura, tranquillità e un contatto profondo con la montagna.',
