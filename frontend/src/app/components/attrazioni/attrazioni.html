@@ -1,3 +1,9 @@
+<div>
+  <button type="button" class="btn btn-primary" (click)="tornaIndietro()">
+    <i class="bi bi-caret-left-fill"></i>
+    Return</button>
+</div>
+
 <div *ngIf="destinazione" class="mb-4 text-center">
   <h2 class="fw-bold">{{ destinazione.nome }}</h2>
   <p class="text-muted">{{ destinazione.descrizione }}</p>

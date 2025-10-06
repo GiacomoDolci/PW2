@@ -1,5 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 import { Api } from '../../services/api';
 
 @Component({
@@ -14,7 +15,8 @@ export class Attrazione implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private api: Api,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private location: Location
   ) {}
 
   ngOnInit(): void {
@@ -25,5 +27,9 @@ export class Attrazione implements OnInit {
         this.cdr.detectChanges();
       });
     }
+  }
+
+    tornaIndietro(): void {
+    this.location.back();
   }
 }

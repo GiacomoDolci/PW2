@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Api } from '../../services/api';
 
@@ -16,7 +17,8 @@ export class Attrazioni implements OnInit {
     private route: ActivatedRoute,
     private api: Api,
     private router: Router,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private location: Location
   ) {}
 
   ngOnInit(): void {
@@ -32,5 +34,9 @@ export class Attrazioni implements OnInit {
 
   apriAttrazione(id: number) {
     this.router.navigate(['/attrazioni', id]);
+  }
+
+  tornaIndietro(): void {
+    this.location.back();
   }
 }
