@@ -1,0 +1,17 @@
+<div *ngIf="attrazione" class="container text-center">
+  <h2 class="fw-bold mb-3">{{ attrazione.nome }}</h2>
+  <span class="badge bg-info text-dark mb-3">{{ attrazione.tipologia }}</span>
+
+  <div class="mb-4">
+    <ng-container *ngIf="attrazione.video; else imageBlock">
+      <video class="rounded" controls width="600">
+        <source [src]="'http://127.0.0.1:8000/' + attrazione.video" type="video/mp4">
+      </video>
+    </ng-container>
+    <ng-template #imageBlock>
+      <img [src]="'http://127.0.0.1:8000/' + attrazione.immagine" alt="{{ attrazione.nome }}" class="img-fluid rounded">
+    </ng-template>
+  </div>
+
+  <p class="lead">{{ attrazione.descrizione }}</p>
+</div>
