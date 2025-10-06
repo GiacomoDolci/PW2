@@ -9,6 +9,8 @@ class Attrazione extends Model
 {
     use HasFactory;
 
+    protected $table = 'attrazioni';
+
     protected $fillable = ['nome', 'immagine', 'tipologia', 'descrizione', 'destinazione_id'];
 
     public function destinazione()
