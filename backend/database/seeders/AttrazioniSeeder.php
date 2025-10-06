@@ -26,7 +26,7 @@ class AttrazioniSeeder extends Seeder
             [
                 'nome' => 'Tremosine sul Garda',
                 'immagine' => '',
-                'video' => 'video/attrazioni/tremosine.mp4',
+                'video' => 'videos/attrazioni/tremosine.mp4',
                 'tipologia' => 'Storica',
                 'descrizione' => 'Tremosine sul Garda è un borgo sospeso tra cielo e acqua, affacciato su uno dei punti panoramici più spettacolari del Lago di Garda. Dalla frazione di Pieve, la vista spazia sulle acque azzurre del lago e sulle pareti rocciose che lo circondano, offrendo un colpo d’occhio mozzafiato. Tra vicoli in pietra, terrazze panoramiche e sentieri che scendono verso la riva, Tremosine regala un’esperienza che unisce natura, quiete e meraviglia paesaggistica.',
                 'destinazione_id' => $lagoDiGarda->id
