@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Api } from '../../services/api';
 
 @Component({
@@ -12,7 +12,12 @@ export class Attrazioni implements OnInit {
   destinazione: any;
   attrazioni: any[] = [];
 
-  constructor(private route: ActivatedRoute, private api: Api) {}
+  constructor(
+    private route: ActivatedRoute,
+    private api: Api,
+    private router: Router,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
@@ -20,7 +25,12 @@ export class Attrazioni implements OnInit {
       this.api.getDestinazione(+id).subscribe(data => {
         this.destinazione = data;
         this.attrazioni = data.attrazioni;
+        this.cdr.detectChanges();
       });
     }
+  }
+
+  apriAttrazione(id: number) {
+    this.router.navigate(['/attrazioni', id]);
   }
 }
